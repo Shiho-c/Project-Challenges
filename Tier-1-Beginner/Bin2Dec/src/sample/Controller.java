@@ -14,13 +14,23 @@ public class Controller {
     private TextArea InputBox;
 
     private MathFunctions MathFunc;
+    private Helper Helper;
 
     public Controller() {
         MathFunc = new MathFunctions();
+        Helper = new Helper();
     }
 
 
     public void convert(ActionEvent event) {
+        boolean isItBinary = Helper.checkBinary(InputBox.getText());
+        if(!isItBinary) {
+            Helper.showAlert("Warning!", "Wrong Input", "Please only enter a number between 0 and 1");
+            ResultBox.setText("");
+            InputBox.setText("");
+            return;
+        }
+        ResultBox.setText("");
         String[] binaries = InputBox.getText().split("\n");
         String results = ResultBox.getText();
         for(String binary: binaries) {
