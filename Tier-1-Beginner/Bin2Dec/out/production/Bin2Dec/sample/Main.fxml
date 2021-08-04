@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="238.0" prefWidth="422.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TextArea fx:id="InputBox" layoutX="14.0" layoutY="36.0" prefHeight="195.0" prefWidth="149.0" />
+      <Text layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter the binary here." wrappingWidth="149.0">
+         <font>
+            <Font name="System Italic" size="16.0" />
+         </font></Text>
+      <Button layoutX="332.0" layoutY="37.0" mnemonicParsing="false" onAction="#convert" prefHeight="25.0" prefWidth="82.0" text="Convert" />
+      <TextArea fx:id="ResultBox" layoutX="174.0" layoutY="36.0" prefHeight="195.0" prefWidth="149.0" />
+      <Text layoutX="174.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result Tab" textAlignment="CENTER" wrappingWidth="149.0">
+         <font>
+            <Font name="System Italic" size="16.0" />
+         </font>
+      </Text>
+      <Button layoutX="332.0" layoutY="74.0" mnemonicParsing="false" onAction="#convert" text="Read .txt file" />
+      <Button layoutX="332.0" layoutY="107.0" mnemonicParsing="false" onAction="#convert" prefHeight="25.0" prefWidth="82.0" text="Instructions" />
+   </children>
+</AnchorPane>
